@@ -1340,7 +1340,6 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 
   .header__menu {
-    display: none;
     background-color: transparent;
   }
 
