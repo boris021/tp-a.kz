@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Комплексное оснащение клиник медицинским оборудованием </title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221021131251">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__row">
+					<div class="header__logo">
+						<a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+					</div>
+					<div class="header__socail">
+						<a href="tel:+77029320182" class="header__socail-item _icon-phone"></a>
+						<a href="https://api.whatsapp.com/send?phone=77029320182" class="header__socail-item _icon-whatsapp"></a>
+					</div>
+					<div class="header__link">
+						<a href="tel:+77029320182" class="header__link-tel">+7 702 932 01 82</a>
+						<a href="mailto:info@tp-a.kz" class="header__link-mail">info@tp-a.kz</a>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<header class="header__menu">
+			<div class="header-menu__container">
+				<!-- <div class="header__menu menu">
+			<button type="button" class="menu__icon icon-menu"><span></span></button>
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
+					<li class="menu__item"><a href="" class="menu__link">Продукция</a>
+						<span class="menu__arrow arrow"></span>
+						<ul class="menu__sub-list">
+							<li>
+								<a href="" class="menu__sub-link">Раздел страницы №1</a>
+							</li>
+							<li>
+								<a href="" class="menu__sub-link">Раздел страницы №2</a>
+							</li>
+							<li>
+								<a href="" class="menu__sub-link">Раздел страницы №3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
+					<li class="menu__item"><a href="" class="menu__link">Проекты</a></li>
+					<li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+					<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+				</ul>
+			</nav>
+		</div> -->
+
+				<div class="header__container">
+					<div data-da=".header__row, 768,3" class="header__menu menu">
+						<div class="menu__icon">
+							<span></span>
+						</div>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li><a href="#" class="menu__link">Главная</a></li>
+								<li>
+									<a href="" class="menu__link">Продукция</a>
+									<span class="menu__arrow"></span>
+									<ul class="menu__sub-list">
+										<li>
+											<a href="" class="menu__sub-link">Продукция №1</a>
+										</li>
+										<li>
+											<a href="" class="menu__sub-link">Продукция №2</a>
+										</li>
+										<li>
+											<a href="" class="menu__sub-link">Продукция №3</a>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#" class="menu__link">О нас</a></li>
+								<li><a href="#" class="menu__link">Проекты</a></li>
+								<li><a href="#" class="menu__link">Новости</a></li>
+								<li><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+		</header>
+		<main class="page">
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20221021131251"></script>
+	<script>
+		"use strict"
+
+		const isMobile = {
+			Android: function() {
+				return navigator.userAgent.match(/Android/i);
+			},
+			BlackBerry: function() {
+				return navigator.userAgent.match(/BlackBerry/i);
+			},
+			iOS: function() {
+				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+			},
+			Opera: function() {
+				return navigator.userAgent.match(/Opera Mini/i);
+			},
+			Windows: function() {
+				return navigator.userAgent.match(/IEMobile/i);
+			},
+			any: function() {
+				return (
+					isMobile.Android() ||
+					isMobile.BlackBerry() ||
+					isMobile.iOS() ||
+					isMobile.Opera() ||
+					isMobile.Windows());
+			}
+		};
+
+		if (isMobile.any()) {
+			document.body.classList.add('_touch');
+
+			let menuArrows = document.querySelectorAll('.menu__arrow');
+			if (menuArrows.length > 0) {
+				for (let index = 0; index < menuArrows.length; index++) {
+					const menuArrow = menuArrows[index];
+					menuArrow.addEventListener("click", function(e) {
+						menuArrow.parentElement.classList.toggle('_active');
+					});
+				}
+			}
+
+		} else {
+			document.body.classList.add('_pc');
+		}
+
+		// Меню бургер
+		const iconMenu = document.querySelector('.menu__icon');
+		const menuBody = document.querySelector('.menu__body');
+		if (iconMenu) {
+			iconMenu.addEventListener("click", function(e) {
+				document.body.classList.toggle('_lock');
+				iconMenu.classList.toggle('_active');
+				menuBody.classList.toggle('_active');
+			});
+		}
+
+
+		// Прокрутка при клике
+		const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+		if (menuLinks.length > 0) {
+			menuLinks.forEach(menuLink => {
+				menuLink.addEventListener("click", onMenuLinkClick);
+			});
+
+			function onMenuLinkClick(e) {
+				const menuLink = e.target;
+				if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+					const gotoBlock = document.querySelector(menuLink.dataset.goto);
+					const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header')
+						.offsetHeight;
+
+					if (iconMenu.classList.contains('_active')) {
+						document.body.classList.remove('_lock');
+						iconMenu.classList.remove('_active');
+						menuBody.classList.remove('_active');
+					}
+
+					window.scrollTo({
+						top: gotoBlockValue,
+						behavior: "smooth"
+					});
+					e.preventDefault();
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
