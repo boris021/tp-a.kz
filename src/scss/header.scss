@@ -1,8 +1,9 @@
 //====================================================================================================
 .header {
 	background: #F2F7FB;
-	@include adaptiveValue("padding-top", 22, 10);
-	@include adaptiveValue("padding-bottom", 22, 10);
+	padding: 15px 0;
+	// @include adaptiveValue("padding-top", 22, 10);
+	// @include adaptiveValue("padding-bottom", 22, 10);
 
 	@media (max-width:$mobile) {
 		position: fixed;
@@ -89,6 +90,7 @@
 	&__menu {
 		background-color: $blueColor;
 		height: auto;
+		padding: 5px 0;
 
 		@media (max-width:$mobile) {
 			background-color: transparent;
