@@ -1,7 +1,8 @@
 //====================================================================================================
 .header {
 	background: #F2F7FB;
-	padding: 22px 0;
+	@include adaptiveValue("padding-top", 22, 10);
+	@include adaptiveValue("padding-bottom", 22, 10);
 
 	&__container {}
 
@@ -12,9 +13,11 @@
 
 	&__logo {
 		flex: 1 1 auto;
+		z-index: 5;
 
 		img {
 			max-width: 100%;
+			padding-right: 15px;
 		}
 	}
 
@@ -26,6 +29,7 @@
 		padding: 0 rem(22);
 		border-right: 1px solid rgba(0, 0, 0, 0.1);
 		border-left: 1px solid rgba(0, 0, 0, 0.1);
+		z-index: 5;
 	}
 
 	&__socail-item {
@@ -45,6 +49,10 @@
 	&__link {
 		display: flex;
 		flex-direction: column;
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
 	}
 
 	&__link-tel {
@@ -74,7 +82,12 @@
 .header {
 	&__menu {
 		background-color: $blueColor;
-		height: 55px;
+		height: auto;
+
+		@media (max-width:$mobile) {
+			display: none;
+			background-color: transparent;
+		}
 	}
 }
 
@@ -88,9 +101,38 @@
 	align-items: center;
 	justify-content: center;
 
-	&__icon {}
+	/*&__body {
 
-	&__body {}
+		@media (max-width:$tablet) {
+			position: fixed;
+			width: 95%;
+			height: 100%;
+			top: 125px;
+			right: -100%;
+			overflow: auto;
+			background: $blueColor;
+			box-shadow: none;
+			padding: 40px 20px;
+			z-index: 4;
+			transition: all 0.3s ease 0s;
+
+			.menu-open & {
+				right: 0;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				position: fixed;
+				height: 70px;
+				width: 100%;
+				top: 0px;
+				left: 0;
+				z-index: 50;
+			}
+		}
+	}
+
 
 	&__list {
 		position: relative;
@@ -98,9 +140,26 @@
 		align-items: center;
 		justify-content: center;
 		@include adaptiveValue("column-gap", 40, 20);
+
+		@media (max-width:$mobile) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		& li {
+			position: relative;
+		}
 	}
 
-	&__item {}
+	&__item {
+		@media (max-width:$mobile) {
+			&:not(:last-child) {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 22px;
+			}
+		}
+	}
 
 	&__link {
 		font-family: "Montserrat";
@@ -112,21 +171,42 @@
 		&:hover {
 			opacity: 0.8;
 		}
-	}
+	}*/
 
-	&__sub-list {
-		position: absolute;
-		top: 100%;
-		left: 15%;
-		background-color: #fff;
-		padding: 15px;
-		min-width: 200px;
-	}
-
-	&__sub-link {}
 }
 
 //========================================================================================================================================================
+.menu__icon {
+	display: none;
+}
+
+.menu__body {}
+
+.menu__list {}
+
+.menu__list>li {
+	position: relative;
+	margin: 0px 0px 0px 20px;
+}
+
+.menu__link {
+	color: #fff;
+	font-size: 18px;
+}
+
+.menu__link:hover {
+	text-decoration: underline;
+}
+
+.menu__sub-list {
+	position: absolute;
+	top: 125%;
+	left: 0;
+	background-color: #fff;
+	padding: 15px;
+	min-width: 200px;
+}
+
 .menu__sub-list li {
 	margin: 0px 0px 10px 0px;
 }
@@ -136,7 +216,7 @@
 }
 
 .menu__sub-link {
-	color: #fff;
+	color: #000;
 }
 
 .menu__sub-link:hover {
@@ -186,6 +266,7 @@ body._touch .menu__list>li._active .menu__arrow {
 	transform: rotate(-180deg);
 }
 
+/* ----------------------- */
 @media (min-width: 767px) {
 	.menu__list {
 		display: flex;
@@ -223,7 +304,7 @@ body._touch .menu__list>li._active .menu__arrow {
 		height: 10%;
 		width: 100%;
 		transition: all 0.3s ease 0s;
-		background-color: #fff;
+		background-color: $blueColor;
 	}
 
 	.menu__icon::before,
@@ -261,29 +342,30 @@ body._touch .menu__list>li._active .menu__arrow {
 	.menu__body {
 		position: fixed;
 		top: 0;
-		left: -100%;
+		right: -100%;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.9);
-		padding: 100px 30px 30px 30px;
-		transition: left 0.3s ease 0s;
+		padding: 20px 30px 30px 30px;
+		transition: left 0.8s ease 0s;
 		overflow: auto;
+		margin-top: 60px;
 	}
 
 	.menu__body._active {
-		left: 0;
+		right: 0;
 	}
 
-	.menu__body::before {
-		content: "";
-		position: fixed;
-		width: 100%;
-		top: 0;
-		left: 0;
-		height: 70px;
-		background-color: #912105;
-		z-index: 2;
-	}
+	// .menu__body::before {
+	// 	content: "";
+	// 	position: fixed;
+	// 	width: 100%;
+	// 	top: 0;
+	// 	left: 0;
+	// 	min-height: 85px;
+	// 	background-color: white;
+	// 	z-index: 2;
+	// }
 
 	.menu__list>li {
 		flex-wrap: wrap;
@@ -320,7 +402,7 @@ body._touch .menu__list>li._active .menu__arrow {
 //====================================================================================================
 
 //Burger
-
+/*
 .icon-menu {
 	display: none;
 
@@ -375,4 +457,4 @@ body._touch .menu__list>li._active .menu__arrow {
 			}
 		}
 	}
-}
+}*/
