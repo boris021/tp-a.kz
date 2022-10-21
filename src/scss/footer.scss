@@ -1,3 +1,154 @@
 //====================================================================================================
+.footer {
+	margin-top: 140px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../img/footer/footer-bg.jpg) no-repeat;
+		z-index: -1;
+		object-fit: cover;
+	}
+
+	&__container {}
+
+	&__ping {
+		max-width: 852px;
+		margin: auto;
+		text-align: center;
+		background: #003976;
+		border-radius: 20px;
+		@include adaptiveValue("padding", 50, 20);
+		color: $whiteColor;
+		transform: translateY(-50%);
+		z-index: -1;
+	}
+
+	&__ping-text {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 30, 24);
+		line-height: math.div(37, 30);
+		margin-bottom: 8px;
+	}
+
+	&__ping-link {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 70, 34);
+		line-height: math.div(85, 70);
+		transition: opacity 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__row {
+		transform: translateY(-15%);
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__menu {
+		display: flex;
+		flex: 0 1 30%;
+		margin: 0 10px;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__link {
+		padding: 10px 20px;
+		background: rgba(255, 255, 255, 0.85);
+		border-radius: 10px;
+		display: block;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 16);
+		transition: all 0.3s ease 0s;
+
+		@media (max-width:$mobile) {
+			padding: 6px 20px;
+		}
+
+		&:hover {
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			opacity: 0.8;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 7px;
+		}
+	}
+
+	&__action {
+		@media (max-width: em(726)) {
+			margin-top: 20px;
+		}
+	}
+
+	&__logo {
+		width: 281px;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+.action {
+
+
+	&__phone {
+		display: flex;
+		flex-direction: column;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 28, 20);
+		line-height: math.div(34, 28);
+		@include adaptiveValue("margin-bottom", 27, 15);
+		transition: opacity 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		& span {
+			font-weight: 800;
+			@include adaptiveValue("font-size", 16, 14);
+			line-height: math.div(20, 16);
+			margin-bottom: 7px;
+		}
+	}
+
+	&__link-phone {}
+
+	&__mail {
+		display: flex;
+		flex-direction: column;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 28, 20);
+		line-height: math.div(34, 28);
+		transition: opacity 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+
+		& span {
+			font-weight: 800;
+			@include adaptiveValue("font-size", 16, 14);
+			line-height: math.div(20, 16);
+			margin-bottom: 7px;
+		}
+	}
+
+	&__link-mail {}
+}
 
 //====================================================================================================
