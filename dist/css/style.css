@@ -487,7 +487,7 @@ body::after {
 }
 
 .header__logo img {
-  max-width: 100%;
+  max-width: 193px;
   padding-right: 15px;
 }
 
@@ -585,10 +585,8 @@ body::after {
   color: #003976;
 }
 
-.header__menu {
+.header__menu2 {
   background-color: #003976;
-  height: auto;
-  padding: 5px 0;
 }
 
 .menu {
@@ -601,77 +599,6 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*&__body {
-
-  	@media (max-width:$tablet) {
-  		position: fixed;
-  		width: 95%;
-  		height: 100%;
-  		top: 125px;
-  		right: -100%;
-  		overflow: auto;
-  		background: $blueColor;
-  		box-shadow: none;
-  		padding: 40px 20px;
-  		z-index: 4;
-  		transition: all 0.3s ease 0s;
-
-  		.menu-open & {
-  			right: 0;
-  		}
-
-  		&::before {
-  			content: '';
-  			position: absolute;
-  			position: fixed;
-  			height: 70px;
-  			width: 100%;
-  			top: 0px;
-  			left: 0;
-  			z-index: 50;
-  		}
-  	}
-  }
-
-
-  &__list {
-  	position: relative;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	@include adaptiveValue("column-gap", 40, 20);
-
-  	@media (max-width:$mobile) {
-  		display: flex;
-  		flex-direction: column;
-  	}
-
-  	& li {
-  		position: relative;
-  	}
-  }
-
-  &__item {
-  	@media (max-width:$mobile) {
-  		&:not(:last-child) {
-  			margin-top: 20px;
-  			margin-bottom: 20px;
-  			font-size: 22px;
-  		}
-  	}
-  }
-
-  &__link {
-  	font-family: "Montserrat";
-  	font-weight: 700;
-  	line-height: math.div(18, 15);
-  	color: $whiteColor;
-  	transition: opacity 0.3s ease 0s;
-
-  	&:hover {
-  		opacity: 0.8;
-  	}
-  }*/
 }
 
 .menu__icon {
@@ -680,29 +607,45 @@ body::after {
 
 .menu__list > li {
   position: relative;
-  margin: 0px 0px 0px 20px;
+  margin: 5px 0px 5px 20px;
 }
 
 .menu__link {
+  font-weight: 700;
+  font-size: 15px;
   color: #fff;
-  font-size: 18px;
 }
 
 .menu__link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .menu__sub-list {
   position: absolute;
-  top: 125%;
+  top: 100%;
   left: 0;
-  background-color: #fff;
-  padding: 15px;
-  min-width: 200px;
+  background-color: #FCFEFF;
+  min-width: 315px;
+  z-index: 10;
+  border: 1px solid #C9C9C9;
 }
 
 .menu__sub-list li {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
+  border-bottom: 1px solid #C9C9C9;
+  padding: 10px 26px;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.menu__sub-list li:last-child {
+  border-bottom: none;
+}
+
+.menu__sub-list li:hover {
+  background-color: #003976;
+  color: #fff;
 }
 
 .menu__sub-list li:last-child {
@@ -710,20 +653,19 @@ body::after {
 }
 
 .menu__sub-link {
-  color: #000;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.2;
+  display: block;
 }
 
 .menu__sub-link:hover {
-  text-decoration: underline;
-}
-
-.menu__arrow {
-  display: none;
+  text-decoration: none;
 }
 
 /* ----------------------- */
 
-body._pc .menu__list > li:hover .menu__sub-list {
+.menu__list > li:hover .menu__sub-list {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(0px, 0px);
@@ -732,7 +674,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   pointer-events: all;
 }
 
-body._touch .menu__list > li {
+.menu__list > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,17 +683,17 @@ body._touch .menu__list > li {
           align-items: center;
 }
 
-body._touch .menu__link {
+.menu__link {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
-body._touch .menu__arrow {
+.menu__arrow {
   display: block;
   width: 0;
   height: 0;
-  margin: 0px 0px 0px 5px;
+  margin: 5px 0px 0px 5px;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s;
@@ -762,7 +704,7 @@ body._touch .menu__arrow {
   border-top: 10px solid #fff;
 }
 
-body._touch .menu__list > li._active .menu__sub-list {
+.menu__list > li._active .menu__sub-list {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(0px, 0px);
@@ -771,7 +713,7 @@ body._touch .menu__list > li._active .menu__sub-list {
   pointer-events: all;
 }
 
-body._touch .menu__list > li._active .menu__arrow {
+.menu__list > li._active .menu__arrow {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
@@ -1547,7 +1489,6 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 30px;
     height: 18px;
     cursor: pointer;
-    z-index: 6;
   }
 
   .menu__icon span,
@@ -1606,21 +1547,19 @@ body._touch .menu__list > li._active .menu__arrow {
   .menu__body {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -100%;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px 30px 30px 30px;
-    -webkit-transition: left 0.8s ease 0s;
-    -o-transition: left 0.8s ease 0s;
-    transition: left 0.8s ease 0s;
+    padding: 100px 30px 30px 30px;
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
     overflow: auto;
-    margin-top: 100px;
-    z-index: 5;
   }
 
   .menu__body._active {
-    right: 0;
+    left: 0;
   }
 
   .menu__body::before {
@@ -1629,9 +1568,9 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 100%;
     top: 0;
     left: 0;
-    min-height: 85px;
-    background-color: white;
-    z-index: 2;
+    height: 80px;
+    background-color: #fff;
+    z-index: 50;
   }
 
   .menu__list > li {
@@ -1664,13 +1603,13 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .menu__sub-link {
     font-size: 20px;
-    color: #000;
   }
 }
 
-@media (max-width: 767px) and (max-width: 26.5625em) {
-  .menu__body {
-    margin-top: 85px;
+@media (max-width: 767px) and (max-width: 47.99875em) {
+  .menu__sub-link {
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 
@@ -1713,12 +1652,20 @@ body._touch .menu__list > li._active .menu__arrow {
     z-index: 5;
   }
 
+  .header__socail {
+    padding: 0 10px;
+  }
+
   .header__link {
     display: none;
   }
 
-  .header__menu {
+  .header__menu2 {
     background-color: transparent;
+  }
+
+  .menu__sub-list {
+    min-width: 215px;
   }
 
   .footer__link {
@@ -1752,6 +1699,12 @@ body._touch .menu__list > li._active .menu__arrow {
 @media (max-width: 45.375em) {
   .footer__action {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .header__socail {
+    display: none;
   }
 }
 
