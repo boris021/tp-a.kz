@@ -40,10 +40,6 @@
 		@media (max-width:$mobile) {
 			padding: 0 10px;
 		}
-
-		@media (max-width:$mobileSmall) {
-			display: none;
-		}
 	}
 
 	&__socail-item {
@@ -65,8 +61,17 @@
 		flex-direction: column;
 
 		@media (max-width:$mobile) {
-			display: none;
+			margin-top: rem(20);
+			color: #fff;
+			border-top: 1px solid #ededed;
+			padding-top: 15px;
+
+			a {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
 		}
+
 	}
 
 	&__link-tel {

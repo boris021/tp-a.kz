@@ -142,7 +142,9 @@
 	&__content {}
 
 	&__img {
-		height: 164px;
+		height: rem(164);
+		width: rem(88);
+		object-fit: cover;
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("margin-right", 50, 20);
@@ -187,7 +189,8 @@
 		margin: 0 auto;
 
 		@media (max-width:$mobile) {
-			padding: 30px;
+			padding: 20px;
+			margin-top: rem(40);
 		}
 
 

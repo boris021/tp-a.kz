@@ -1229,7 +1229,10 @@ body::after {
 }
 
 .card__img {
-  height: 164px;
+  height: 10.25rem;
+  width: 5.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1657,7 +1660,15 @@ body::after {
   }
 
   .header__link {
-    display: none;
+    margin-top: 1.25rem;
+    color: #fff;
+    border-top: 1px solid #ededed;
+    padding-top: 15px;
+  }
+
+  .header__link a {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .header__menu2 {
@@ -1692,19 +1703,14 @@ body::after {
   }
 
   .special__container {
-    padding: 30px;
+    padding: 20px;
+    margin-top: 2.5rem;
   }
 }
 
 @media (max-width: 45.375em) {
   .footer__action {
     margin-top: 20px;
-  }
-}
-
-@media (max-width: 29.99875em) {
-  .header__socail {
-    display: none;
   }
 }
 
