@@ -1,11 +1,42 @@
-<!-- 
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
 			<div class="popup__text">
+				<div class="popup__img">
+					<img src="@img/popup-bg.jpg" alt="popup">
+				</div>
+				<div class="popup__contentcard">
+					<button data-close type="button" class="popup__close">X</button>
+					<div class="popup__content-title">Получите детальную консультацию специалиста</div>
+					<div class="popup__content-text">Оставьте заявку и в ближайшее время с вами свяжется специалист компании,
+						который проконсультирует вас по всем интересующим вопросам</div>
+					<form action="" class="popup__content-form">
+						<input type="hidden" name="hidden">
+						<div class="popup__content-group">
+							<label for="name">Введите ваше имя <span>*</span></label>
+							<div class="input__group">
+								<input type="text" name="name" id="" placeholder="Иван Иванов"
+									class="input popup__content-group-input">
+								<span class="input__group-icon _icon-user"></span>
+							</div>
+
+						</div>
+						<div class="popup__content-group">
+							<label for="tel">Введите ваш телефон <span>*</span></label>
+							<div class="input__group">
+								<input type="tel" name="tel" id="tel" placeholder="+7 (___) ___ ____"
+									class="input popup__content-group-input tel">
+								<span class="input__group-icon _icon-phone"></span>
+							</div>
+						</div>
+						<button type="submit" class="button form-btn">Отправить заявку</button>
+						<span class="form-sutitle">
+							Нажимая на кнопку вы соглашаетесь на обработку персональных данных, согласно политике
+							конфиденциальности
+						</span>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
- -->

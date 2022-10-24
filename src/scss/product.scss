@@ -1,0 +1,244 @@
+.pageproduct {
+	position: relative;
+	// height: 320px;
+	@include adaptiveValue("padding-top", 70, 120);
+	@include adaptiveValue("padding-bottom", 70, 30);
+	// margin-bottom: 250px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../img/product/product-bg.jpg) center center/cover no-repeat;
+		z-index: -1;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@media (max-width:$tablet) {
+			justify-content: center;
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		background: #FFFFFF;
+		border-radius: 20px;
+		width: 140px;
+		height: 140px;
+		text-align: center;
+		padding: 20px;
+		margin-right: 30px;
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.catalog {
+	@include adaptiveValue("margin-top", 60, 40);
+
+	&__container {
+		display: grid;
+		grid-template-columns: 330px auto;
+
+		@media (max-width:$tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__sidebar {
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&__sidebar-title {
+		font-weight: 800;
+		font-size: 20px;
+		line-height: math.div(24, 20);
+		margin-bottom: 25px;
+	}
+
+	&__sidebar-menu {}
+
+	&__box {
+		margin-left: 30px;
+
+		@media (max-width:$tablet) {
+			margin-left: 0;
+		}
+	}
+}
+
+.sidebar {
+
+
+	&__menu {}
+
+	&__menu-link {
+		background: $whiteColor;
+		border-radius: 10px;
+		padding: 36px 20px;
+		font-weight: 800;
+		font-size: 20px;
+		line-height: 24px;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $blueColor;
+			color: $whiteColor;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.box {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+
+	@media (max-width: em(752)) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width:$mobileSmall) {
+		grid-template-columns: 1fr;
+	}
+
+	&__item {
+		background: #FFFFFF;
+		box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.25);
+		border-radius: 20px;
+		padding: 24px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item-img {
+		max-width: 162px;
+		height: 209px;
+		margin: auto;
+		margin-bottom: 5px;
+
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__item-title {
+		font-weight: 800;
+		font-size: 15px;
+		line-height: math.div(18, 15);
+		margin-bottom: 6px;
+	}
+
+	&__item-line {
+		width: 100%;
+		border: 1px solid #C9C9C9;
+	}
+
+	&__item-btn {
+		display: inline-block;
+		margin-top: 16px;
+	}
+}
+
+// navigation ========================================================================================================================================================
+.box {
+
+	&__navigation {
+		@include adaptiveValue("margin-top", 52, 25);
+		@include adaptiveValue("margin-bottom", 100, 20);
+	}
+
+	&__navigation-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: math.div(29, 24);
+		margin-bottom: 20px;
+	}
+
+	&__navigation-action {
+		display: flex;
+		align-items: center;
+	}
+
+	&__navigation-hide,
+	&__navigation-active {
+		display: block;
+		width: 50px;
+		height: 50px;
+		padding: 5px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 800;
+		font-size: 24px;
+		transition: box-shadow 0.3s ease 0s;
+
+		&:hover {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+		}
+	}
+
+	&__navigation-hide {
+		border: 1px solid #C9C9C9;
+		color: #C9C9C9;
+		margin-right: 13px;
+	}
+
+	&__navigation-active {
+		background: #FFFFFF;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		margin-right: 13px;
+	}
+
+	&__navigation-arrow {
+		height: 50px;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 20px;
+		padding: 13px 25px;
+		font-weight: 800;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		transition: box-shadow 0.3s ease 0s;
+
+		&:hover {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+		}
+
+		span {
+			margin-left: 5px;
+		}
+	}
+}

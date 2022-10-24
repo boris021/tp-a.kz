@@ -5,3 +5,23 @@
 	line-height: math.div(85, 70);
 	color: #333333;
 }
+
+.titlepd {
+	font-weight: 800;
+	@include adaptiveValue("font-size", 60, 32);
+	line-height: math.div(73, 60);
+	color: $whiteColor;
+}
+
+.btn-sm {
+	background: #003976;
+	border-radius: 20px;
+	padding: 16px 20px;
+	font-weight: 800;
+	color: $whiteColor;
+	transition: opacity 0.3s ease 0s;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
