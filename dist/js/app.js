@@ -6676,15 +6676,44 @@
                 modules: [ Navigation ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 1,
-                spaceBetween: 0,
+                slidesPerView: 3,
+                spaceBetween: 30,
                 autoHeight: true,
                 speed: 800,
+                loop: true,
+                lazy: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 3e3,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
                 navigation: {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
                 },
-                on: {}
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                }
             });
         }
         window.addEventListener("load", (function(e) {
