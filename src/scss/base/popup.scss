@@ -112,7 +112,7 @@ body::after {
 	}
 
 	&__content-title {
-		@include adaptiveValue("margin-top", 90, 30);
+		@include adaptiveValue("margin-top", 40, 0);
 		font-weight: 800;
 		@include adaptiveValue("font-size", 28, 22);
 		line-height: math.div(34, 28);
@@ -175,7 +175,8 @@ body::after {
 	display: block;
 	margin-top: 20px;
 	font-weight: 300;
-	line-height: math.div(15, 12);
+	@include adaptiveValue("font-size", 14, 12);
+	line-height: math.div(15, 14);
 	text-align: center;
 }
 
