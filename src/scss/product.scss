@@ -58,7 +58,7 @@
 
 	&__container {
 		display: grid;
-		grid-template-columns: 330px auto;
+		grid-template-columns: 300px auto;
 
 		@media (max-width:$tablet) {
 			grid-template-columns: 1fr;

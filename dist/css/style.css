@@ -773,8 +773,8 @@ body::after {
 .catalog__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 330px auto;
-  grid-template-columns: 330px auto;
+  -ms-grid-columns: 300px auto;
+  grid-template-columns: 300px auto;
 }
 
 .catalog__sidebar-title {
