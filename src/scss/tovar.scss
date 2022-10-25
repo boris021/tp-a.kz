@@ -1,4 +1,5 @@
 .abouttovarpage {
+	margin-top: 60px;
 
 	&__container {}
 
@@ -280,7 +281,7 @@
 
 .computation-form {
 	display: grid;
-	grid-template-columns: 38% 38% auto;
+	grid-template-columns: 34% 34% 1fr;
 	column-gap: 30px;
 	align-items: center;
 	justify-content: space-between;
