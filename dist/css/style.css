@@ -1080,9 +1080,10 @@ body::after {
   display: block;
   position: absolute;
   width: 100%;
+  height: 1px;
+  background-color: #C6C6C6;
   bottom: -15px;
   left: 0;
-  border: 1px solid #C6C6C6;
 }
 
 .abouttovarpage__label {
@@ -1109,7 +1110,8 @@ body::after {
   width: 100%;
   bottom: -15px;
   left: 0;
-  border: 1px solid #C6C6C6;
+  height: 1px;
+  background-color: #C6C6C6;
 }
 
 .abouttovarpage__meta-item {
@@ -1263,7 +1265,8 @@ body::after {
   width: 100%;
   bottom: -8px;
   left: 0;
-  border: 1px solid #C6C6C6;
+  height: 1px;
+  background-color: #C6C6C6;
 }
 
 .description__text {
@@ -1319,7 +1322,8 @@ body::after {
   width: 100%;
   bottom: -8px;
   left: 0;
-  border: 1px solid #C6C6C6;
+  height: 1px;
+  background-color: #C6C6C6;
   margin-top: 20px;
 }
 
@@ -1347,20 +1351,31 @@ body::after {
   font-weight: 800;
   line-height: 1.2115384615;
   text-transform: uppercase;
-  margin-bottom: 43px;
   text-align: center;
   color: #003976;
 }
 
-@supports (font-size: clamp( 1.625rem , 1.0340909091rem  +  2.9545454545vw , 3.25rem )) {
+@supports (font-size: clamp( 1.375rem , 0.6931818182rem  +  3.4090909091vw , 3.25rem )) {
   .computation__title {
-    font-size: clamp( 1.625rem , 1.0340909091rem  +  2.9545454545vw , 3.25rem );
+    font-size: clamp( 1.375rem , 0.6931818182rem  +  3.4090909091vw , 3.25rem );
   }
 }
 
-@supports not (font-size: clamp( 1.625rem , 1.0340909091rem  +  2.9545454545vw , 3.25rem )) {
+@supports not (font-size: clamp( 1.375rem , 0.6931818182rem  +  3.4090909091vw , 3.25rem )) {
   .computation__title {
-    font-size: calc(1.625rem + 1.625 * (100vw - 20rem) / 55);
+    font-size: calc(1.375rem + 1.875 * (100vw - 20rem) / 55);
+  }
+}
+
+@supports (margin-bottom: clamp( 1.875rem , 1.5795454545rem  +  1.4772727273vw , 2.6875rem )) {
+  .computation__title {
+    margin-bottom: clamp( 1.875rem , 1.5795454545rem  +  1.4772727273vw , 2.6875rem );
+  }
+}
+
+@supports not (margin-bottom: clamp( 1.875rem , 1.5795454545rem  +  1.4772727273vw , 2.6875rem )) {
+  .computation__title {
+    margin-bottom: calc(1.875rem + 0.8125 * (100vw - 20rem) / 55);
   }
 }
 
