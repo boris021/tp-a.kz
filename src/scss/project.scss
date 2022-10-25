@@ -1,0 +1,49 @@
+.projectpage {
+
+	&__container {
+		@include adaptiveValue("margin-top", 108, 40);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+
+		@media (max-width:$tablet) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__card {
+		position: relative;
+	}
+
+	&__card-img {
+		max-width: 690px;
+
+		img {
+			max-width: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
+
+	&__card-text {
+		background: rgba(255, 255, 255, 0.71);
+		border-radius: 10px;
+		padding: 25px;
+		width: 80%;
+		text-align: center;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(24, 20);
+		color: $blueColor;
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		@media (max-width:$mobile) {
+			bottom: 20px;
+			padding: 15px;
+			width: 90%;
+		}
+	}
+}

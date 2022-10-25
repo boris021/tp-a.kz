@@ -1,0 +1,46 @@
+.post {
+
+	&__container {
+		@include adaptiveValue("margin-top", 108, 40);
+	}
+
+	&__content {
+		background: #FFFFFF;
+		border-radius: 10px;
+		padding: 36px 44px;
+
+		@media (max-width:$mobile) {
+			padding: 20px;
+		}
+	}
+
+	&__content-img {
+		border-radius: 10px;
+		@include adaptiveValue("margin-bottom", 33, 10);
+
+		img {
+			width: 100%;
+			border-radius: 10px;
+			object-fit: cover;
+		}
+	}
+
+	&__content-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 40, 20);
+		line-height: math.div(49, 40);
+		margin-bottom: 20px;
+	}
+
+	&__content-text {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 16);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

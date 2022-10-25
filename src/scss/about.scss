@@ -80,7 +80,7 @@
 			transform: translate(-150px, 30px);
 
 			@media (max-width:$tablet) {
-				transform: translate(0px, -30px);
+				transform: translate(0px, 13px);
 				width: 100%;
 				text-align: center;
 			}
@@ -113,4 +113,12 @@
 		}
 
 	}
+}
+
+.advantage__item-about {
+	background-color: #fff;
+}
+
+.advantage-about {
+	@include adaptiveValue("margin-bottom", 40, 0);
 }

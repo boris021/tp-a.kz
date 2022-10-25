@@ -1,0 +1,25 @@
+.newspage {
+
+	&__container {
+		@include adaptiveValue("margin-top", 108, 40);
+	}
+}
+
+.news {
+
+	&__row {}
+
+	&__card {}
+
+	&__card-img {}
+
+	&__card-content {}
+
+	&__card-title {}
+
+	&__card-text {}
+
+	&__card-link {}
+}
+
+.box-text {}
