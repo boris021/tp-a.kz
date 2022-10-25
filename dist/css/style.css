@@ -1301,15 +1301,15 @@ body::after {
   position: relative;
 }
 
-@supports (margin-bottom: clamp( 3.75rem , 2.3863636364rem  +  6.8181818182vw , 7.5rem )) {
+@supports (margin-bottom: clamp( 2.5rem , 0.6818181818rem  +  9.0909090909vw , 7.5rem )) {
   .abouttovarpagecenter {
-    margin-bottom: clamp( 3.75rem , 2.3863636364rem  +  6.8181818182vw , 7.5rem );
+    margin-bottom: clamp( 2.5rem , 0.6818181818rem  +  9.0909090909vw , 7.5rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 3.75rem , 2.3863636364rem  +  6.8181818182vw , 7.5rem )) {
+@supports not (margin-bottom: clamp( 2.5rem , 0.6818181818rem  +  9.0909090909vw , 7.5rem )) {
   .abouttovarpagecenter {
-    margin-bottom: calc(3.75rem + 3.75 * (100vw - 20rem) / 55);
+    margin-bottom: calc(2.5rem + 5 * (100vw - 20rem) / 55);
   }
 }
 
@@ -1321,6 +1321,18 @@ body::after {
   left: 0;
   border: 1px solid #C6C6C6;
   margin-top: 20px;
+}
+
+@supports (margin-bottom: clamp( 0.0000000625rem , -1.3636362784rem  +  6.8181817045vw , 3.75rem )) {
+  .computation {
+    margin-bottom: clamp( 0.0000000625rem , -1.3636362784rem  +  6.8181817045vw , 3.75rem );
+  }
+}
+
+@supports not (margin-bottom: clamp( 0.0000000625rem , -1.3636362784rem  +  6.8181817045vw , 3.75rem )) {
+  .computation {
+    margin-bottom: calc(0.0000000625rem + 3.7499999375 * (100vw - 20rem) / 55);
+  }
 }
 
 .computation__row {

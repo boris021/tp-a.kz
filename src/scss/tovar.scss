@@ -225,7 +225,7 @@
 
 .abouttovarpagecenter {
 	position: relative;
-	@include adaptiveValue("margin-bottom", 120, 60);
+	@include adaptiveValue("margin-bottom", 120, 40);
 
 	&::before {
 		content: '';
@@ -243,6 +243,7 @@
 //========================================================================================================================================================
 
 .computation {
+	@include adaptiveValue("margin-bottom", 60, 0);
 
 	&__container {}
 
