@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221025123316">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221027171611">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,17 +45,17 @@
 								<a href="product.html" class="menu__link">Продукция</a>
 								<span class="menu__arrow"></span>
 								<ul class="menu__sub-list">
-									<li><a href="tovar.html" class="menu__sub-link">Рентгенология</a></li>
-									<li><a href="" class="menu__sub-link">Хирургия</a></li>
-									<li><a href="" class="menu__sub-link">Анестезиология и реанимация</a></li>
-									<li><a href="" class="menu__sub-link">Функциональная диагностика</a></li>
-									<li><a href="" class="menu__sub-link">Акушерство и гинекология</a></li>
-									<li><a href="" class="menu__sub-link">Эндоскопия</a></li>
-									<li><a href="" class="menu__sub-link">Ультразвуковая диагностика</a></li>
-									<li><a href="" class="menu__sub-link">Отоларингология</a></li>
-									<li><a href="" class="menu__sub-link">Неонатология</a></li>
-									<li><a href="" class="menu__sub-link">Урология</a></li>
-									<li><a href="" class="menu__sub-link">Кардиохирургия</a></li>
+									<li><a href="tovar-1.html" class="menu__sub-link">Рентгенология</a></li>
+									<li><a href="tovar-2.html" class="menu__sub-link">Хирургия</a></li>
+									<li><a href="tovar-3.html" class="menu__sub-link">Анестезиология и реанимация</a></li>
+									<li><a href="tovar-4.html" class="menu__sub-link">Функциональная диагностика</a></li>
+									<li><a href="tovar-5.html" class="menu__sub-link">Акушерство и гинекология</a></li>
+									<li><a href="tovar-6.html" class="menu__sub-link">Эндоскопия</a></li>
+									<li><a href="tovar-7.html" class="menu__sub-link">Ультразвуковая диагностика</a></li>
+									<li><a href="tovar-8.html" class="menu__sub-link">Отоларингология</a></li>
+									<li><a href="tovar-9.html" class="menu__sub-link">Неонатология</a></li>
+									<li><a href="tovar-10.html" class="menu__sub-link">Урология</a></li>
+									<li><a href="tovar-11.html" class="menu__sub-link">Кардиохирургия</a></li>
 								</ul>
 							</li>
 							<li><a href="about.html" class="menu__link">О нас</a></li>
@@ -245,6 +245,22 @@
 			</div>
 		</footer>
 	</div>
+	<!-- Спасибо -->
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content-close">
+				<div class="popupclose__text">
+					<div class="popupclose__text-close">Спасибо за вашу заявку!</div>
+					<div class="popupclose__text-subtitleclose">В ближайшие время с вами свяжется специалист компании,
+						который проконсультирует вас по всем вопросам.</div>
+				</div>
+				<button data-close type="button" class="popup__close-btn">Ок</button>
+			</div>
+		</div>
+	</div>
+
+
+
 	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -257,12 +273,12 @@
 						<div class="popup__content-title">Получите детальную консультацию специалиста</div>
 						<div class="popup__content-text">Оставьте заявку и в ближайшее время с вами свяжется специалист компании,
 							который проконсультирует вас по всем интересующим вопросам</div>
-						<form action="" class="popup__content-form">
+						<form data-dev data-popup-message="#form-message" action="" class="popup__content-form">
 							<input type="hidden" name="hidden">
 							<div class="popup__content-group">
 								<label for="name">Введите ваше имя <span>*</span></label>
 								<div class="input__group">
-									<input type="text" name="name" id="" placeholder="Иван Иванов" class="input popup__content-group-input">
+									<input data-required data-error="Введите имя" type="text" name="name" id="" placeholder="Иван Иванов" class="input popup__content-group-input">
 									<span class="input__group-icon _icon-user"></span>
 								</div>
 
@@ -270,7 +286,7 @@
 							<div class="popup__content-group">
 								<label for="tel">Введите ваш телефон <span>*</span></label>
 								<div class="input__group">
-									<input type="tel" name="tel" id="tel" placeholder="+7 (___) ___ ____" class="input popup__content-group-input tel">
+									<input data-required data-error="Введите номер телефона" type="tel" name="tel" id="tel" placeholder="+7 (___) ___ ____" class="input popup__content-group-input tel">
 									<span class="input__group-icon _icon-phone"></span>
 								</div>
 							</div>
@@ -285,7 +301,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221025123316"></script>
+	<script src="js/app.min.js?_v=20221027171611"></script>
 	<script>
 		"use strict"
 
