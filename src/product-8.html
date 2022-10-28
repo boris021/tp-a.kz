@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Продукция"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="pageproduct">
+				<div class="pageproduct__container">
+					<div class="pageproduct__row">
+						<div class="pageproduct__img">
+							<img src="@img/product/product-img.png" alt="product">
+						</div>
+						<h1 class="pageproduct__titlepd titlepd">Рентгенология</h1>
+					</div>
+				</div>
+			</section>
+
+			<section class="catalog">
+				<div class="catalog__container">
+					<div class="catalog__sidebar">
+						<div class="catalog__sidebar-title">Категории товаров</div>
+						<div class="catalog__sidebar-menu sidebar__menu">
+							<ul class="sidebar__menu">
+								<li class="sidebar__menu-link ">
+									<a href="product-1.html">Рентгенология</a>
+								</li>
+								<li class="sidebar__menu-link ">
+									<a href="product-2.html">Хирургия</a>
+								</li>
+								<li class="sidebar__menu-link ">
+									<a href="product-3.html">Анестезиология и реанимация</a>
+								</li>
+								<li class="sidebar__menu-link ">
+									<a href="product-4.html">Функциональная диагностика</a>
+								</li>
+								<li class="sidebar__menu-link ">
+									<a href="product-5.html">Акушерство и гинекология</a>
+								</li>
+								<li class="sidebar__menu-link ">
+									<a href="product-6.html">Эндоскопия</a>
+								</li>
+								<li class="sidebar__menu-link ">
+									<a href="product-7.html">Ультразвуковая диагностика</a>
+								</li>
+								<li class="sidebar__menu-link sidebar__menu-link-active">
+									<a href="product-8.html">Отоларингология</a>
+								</li>
+								<li class="sidebar__menu-link">
+									<a href="product-9.html">Неонатология</a>
+								</li>
+								<li class="sidebar__menu-link">
+									<a href="product-10.html">Урология</a>
+								</li>
+								<li class="sidebar__menu-link">
+									<a href="product-11.html">Кардиохирургия</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="catalog__box">
+						<div class="catalog__box-card box">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

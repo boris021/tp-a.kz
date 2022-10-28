@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Дефибриллятор-монитор Cardio-Aid"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="abouttovarpage abouttovarpage-top page">
+				<div class="abouttovarpage__container">
+					<div class="abouttovarpage__top">
+						<div class="abouttovarpage__img">
+							<!-- <img src="@img/abouttovarpage/abouttovarpage-product.png" alt="abouttovarpage"> -->
+							<div data-gallery class="gallery">
+								<a href="@img/product/004.png" class="gallery__image">
+									<img alt="Дефибриллятор-монитор Cardio-Aid" src="@img/product/004.png"
+										class="gallery__preview">
+								</a>
+							</div>
+						</div>
+						<div class="abouttovarpage__content">
+							<h2 class="abouttovarpage__abouttovarpagetitle">Дефибриллятор-монитор Cardio-Aid</h2>
+							<div class="abouttovarpage__text">
+								<p>Дефибрилляторы Innomed Medical &ndash; это компактное и высокотехнологичное оборудование с
+									продвинутыми функциями для облегчения работы медперсонала в экстренной ситуации. Специальные
+									технологии позволяют обеспечить оптимизированную поставку энергии. Преимущество
+									дефибрилляторов Innomed Medical заключается в доступности настроек: оказать экстренную помощь
+									можно без предварительного обучения.</p>
+								<span class="abouttovarpage__label">Под заказ</span>
+							</div>
+							<div class="abouttovarpage__meta">
+								<div class="abouttovarpage__meta-item meta-item">
+									<div class="meta-item__list">
+										<img src="@img/tovar/icon1.svg" alt="icon">
+										<span class="meta-item__label">Бренд: </span>
+										<span class="meta-item__title"> nnomed medical</span>
+									</div>
+									<div class="meta-item__list">
+										<img src="@img/tovar/icon2.svg" alt="icon">
+										<span class="meta-item__label">Гарантия: </span>
+										<span class="meta-item__title"> 60 месяцев</span>
+									</div>
+								</div>
+								<div class="abouttovarpage__meta-item meta-item">
+									<div class="meta-item__list">
+										<img src="@img/tovar/icon3.svg" alt="icon">
+										<span class="meta-item__label">Оплата: </span>
+										<span class="meta-item__title"> Любым удобным способом</span>
+									</div>
+									<div class="meta-item__list">
+										<img src="@img/tovar/icon4.svg" alt="icon">
+										<span class="meta-item__label">Бесплатный </span>
+										<span class="meta-item__title">монтаж, наладка и обучение</span>
+									</div>
+								</div>
+							</div>
+							<div class="abouttovarpage__action">
+								<span class="abouttovarpage__action-text">Цены на сайте могут меняться</span>
+								<a data-popup="#popup" href="#popup" class="abouttovarpage__action-btn button">Заказать
+									<span><img src="@img/tovar/arrow-white.svg" alt="arrow"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="abouttovarpage abouttovarpagecenter">
+				<div class="abouttovarpagecenter__container">
+					<div class="abouttovarpage__description">
+						<div class="description__title">Общее описание</div>
+						<div class="description__text">
+							<p>Полнофункциональный клинический дефибриллятор, который подходит для оказания неотложной и
+								терапевтической помощи пациентам. Благодаря встроенной функции AED даже медсестры могут спасать
+								жизни. При желании его можно использовать также для ухода за пациентами, оказывая большую помощь
+								в наблюдении и регистрации жизненно важных показателей после реанимации.</p>
+							<p>&nbsp;</p>
+							<p><strong>Характеристики</strong></p>
+							<p>Двухфазный дефибриллятор</p>
+							<p>7&rdquo; цветной графический TFT ЖК-дисплей</p>
+							<p>Энергия 360 Дж, Технология двухфазной формы сигнала STAR &trade;</p>
+							<p>Встроенная стандартная ЭКГ с 12 отведениями</p>
+							<p>Синхронный или асинхронный режим</p>
+							<p>Полуавтоматическое (AED) или ручное управление</p>
+							<p>Управление с помощью лопастей</p>
+							<p>Короткое время зарядки, обычно от 2,7 секунд до 200 Дж</p>
+							<p>Функции сигнализации</p>
+							<p>3-канальный рекордер высокого разрешения</p>
+							<p>Дополнительный чрескожной кардиостимулятор</p>
+							<p>Дополнительный SpO2, NIBP</p>
+							<p>Дополнительное измерение ETCO2</p>
+							<p>дополнительное 2-канальное измерение температуры</p>
+							<p>дополнительное 2-канальное измерение IBP</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="computation">
+				<div class="computation__container">
+					<div class="computation__row">
+						<div class="computation__title">Оставьте заявку на расчет</div>
+						<form data-ajax data-popup-message="#form-message" action="sendmail.php"
+							class="popup__content-form computation-form">
+							<input type="hidden" name="hidden" value="Дефибриллятор-монитор Cardio-Aid">
+							<div class="popup__content-group computation-group">
+								<label for="name">Введите ваше имя <span>*</span></label>
+								<div class="input__group">
+									<input type="text" name="name" id="" placeholder="Иван Иванов"
+										class="input popup__content-group-input">
+									<span class="input__group-icon _icon-user"></span>
+								</div>
+
+							</div>
+							<div class="popup__content-group computation-group">
+								<label for="tel">Введите ваш телефон <span>*</span></label>
+								<div class="input__group">
+									<input type="tel" name="tel" id="tel" placeholder="+7 (___) ___ ____"
+										class="input popup__content-group-input tel">
+									<span class="input__group-icon _icon-phone"></span>
+								</div>
+							</div>
+							<button type="submit" class="button form-btn computation-btn">Отправить</button>
+						</form>
+						<span class="form-sutitle computation-sutitle">
+							Нажимая на кнопку вы соглашаетесь на обработку персональных данных, согласно политике
+							конфиденциальности
+						</span>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
