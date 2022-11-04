@@ -6,7 +6,7 @@
 	padding: 23px 50px;
 	font-weight: 700;
 	@include adaptiveValue("font-size", 17, 14);
-	line-height: math.div(21, 17);
+	// line-height: math.div(21, 17);
 	text-transform: uppercase;
 	color: $whiteColor;
 	background: linear-gradient(90deg, #003976 0%, #0062CA 100%);
